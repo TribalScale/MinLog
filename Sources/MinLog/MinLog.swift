@@ -1,6 +1,6 @@
 import Foundation
 
-public struct MinLog {
+open class MinLog {
   
   enum LoggingType: String {
     case verbose = "VERBOSE"
@@ -12,7 +12,7 @@ public struct MinLog {
   
   
   /// Initialiser
-  private init() {}
+  public init() {}
   
   /// Get File Name
   /// - Parameter filePath: File Path String
@@ -23,7 +23,7 @@ public struct MinLog {
   
   /// Verbose Logging
   /// - Parameter message: Message String
-  static func v(
+  open class func v(
     _ message: String,
     filePath: String = #file,
     functionName: String = #function,
@@ -37,7 +37,7 @@ public struct MinLog {
   
   /// Debug Logging
   /// - Parameter message: Message String
-  static func d(
+  open class func d(
     _ message: String,
     filePath: String = #file,
     functionName: String = #function,
@@ -51,7 +51,7 @@ public struct MinLog {
   
   /// Info Logging
   /// - Parameter message: Message String
-  static func i(
+  open class func i(
     _ message: String,
     filePath: String = #file,
     functionName: String = #function,
@@ -65,7 +65,7 @@ public struct MinLog {
   
   /// Warning Logging
   /// - Parameter message: Message String
-  static func w(
+  open class func w(
     _ message: String,
     filePath: String = #file,
     functionName: String = #function,
@@ -79,7 +79,7 @@ public struct MinLog {
   
   /// Error Logging
   /// - Parameter message: Message String
-  static func e(
+  open class func e(
     _ message: String,
     filePath: String = #file,
     functionName: String = #function,
